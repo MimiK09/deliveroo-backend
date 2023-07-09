@@ -455,6 +455,6 @@ return res.status(200).json({ message: error.message });
 }
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
 	console.log("Server has started 🚀🚀");
 });
