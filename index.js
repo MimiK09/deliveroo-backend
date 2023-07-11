@@ -6,7 +6,8 @@ app.use(cors());
 const port = 3000;
 
 app.get("/", async (req, res) => {
-try { return res.json({
+try { console.log("test")
+  return res.json({
     restaurant: {
         path: "Le Pain Quotidien",
         name: "Le Pain Quotidien - Montorgueil",
@@ -456,5 +457,5 @@ return res.status(200).json({ message: error.message });
 });
 
 app.listen(process.env.PORT || port, () => {
-	console.log("Server has started 🚀🚀");
+	console.log("Server has started 🚀🚀", port);
 });
